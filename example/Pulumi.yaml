@@ -1,0 +1,13 @@
+name: greeter-example
+runtime: yaml
+plugins:
+  providers:
+    - name: greeter
+      path: ../greeter-plugin
+resources:
+  greeter:
+    type: greeter:index:Greeter
+    properties:
+      who: Bonnie
+outputs:
+  greeting: ${greeter.greeting}
